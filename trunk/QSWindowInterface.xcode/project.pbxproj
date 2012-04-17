@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -89,8 +89,8 @@
 				14D9D1D210D0FFEB00BEABA0 /* Release.xcconfig */,
 			);
 			name = Configuration;
-			path = "../../../blacktree-alchemy/Quicksilver/Configuration";
-			sourceTree = "<group>";
+			path = /private/tmp/QS/Configuration;
+			sourceTree = "<absolute>";
 		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
@@ -154,8 +154,12 @@
 /* Begin PBXProject section */
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
 			buildConfigurationList = 14D9D1C710D0FFD400BEABA0 /* Build configuration list for PBXProject "QSWindowInterface" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,

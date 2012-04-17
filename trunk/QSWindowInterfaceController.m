@@ -57,8 +57,6 @@
     return NSOffsetRect(NSInsetRect(rect,8,0),0,-21);
 }
 
-
-
 - (void)showIndirectSelector:(id)sender{
     if (![iSelector superview] && !expanded)
         [iSelector setFrame:NSOffsetRect([aSelector frame],0,-26)];
@@ -66,27 +64,49 @@
 }
 
 - (void)expandWindow:(id)sender{ 
-    NSRect expandedRect=[[self window]frame];
-	
-    expandedRect.size.height+=EXPAND_HEIGHT;
-    expandedRect.origin.y-=EXPAND_HEIGHT;
-     if (!expanded)
-    [[self window]setFrame:expandedRect display:YES animate:YES];
-	 
+    if (![self expanded]) {
+        NSRect expandedRect=[[self window]frame];
+        
+        expandedRect.size.height+=EXPAND_HEIGHT;
+        expandedRect.origin.y-=EXPAND_HEIGHT;
+        [[self window]setFrame:expandedRect display:YES animate:YES];
+    }
     [super expandWindow:sender];
 }
 
 - (void)contractWindow:(id)sender{
-    NSRect contractedRect=[[self window]frame];
-    
-    contractedRect.size.height-=EXPAND_HEIGHT;
-    contractedRect.origin.y+=EXPAND_HEIGHT;
-
-    if (expanded)
+    if([self expanded]) {
+        NSRect contractedRect=[[self window]frame];
+        
+        contractedRect.size.height-=EXPAND_HEIGHT;
+        contractedRect.origin.y+=EXPAND_HEIGHT;
+        
         [[self window]setFrame:contractedRect display:YES animate:YES];
-    
+    }
     [super contractWindow:sender];
 }
 
+
+- (void)updateDetailsString {
+    NSString *commandName = [[self currentCommand] name];
+	[details setStringValue:(commandName ? commandName : @"")];
+	return;
+	NSResponder *firstResponder = [[self window] firstResponder];
+	if ([firstResponder respondsToSelector:@selector(objectValue)]) {
+		id object = [firstResponder performSelector:@selector(objectValue)];
+		if ([object respondsToSelector:@selector(details)]) {
+			NSString *string = [object details];
+			if (string) {
+				[details setStringValue:string];
+				return;
+			}
+		}
+	}
+	[details setStringValue:[[self currentCommand] name]];}
+
+- (void)searchObjectChanged:(NSNotification*)notif {
+	[super searchObjectChanged:notif];
+	[self updateDetailsString];
+}
 
 @end
