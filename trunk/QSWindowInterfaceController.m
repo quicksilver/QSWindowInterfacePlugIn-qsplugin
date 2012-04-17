@@ -69,6 +69,7 @@
         
         expandedRect.size.height+=EXPAND_HEIGHT;
         expandedRect.origin.y-=EXPAND_HEIGHT;
+        constrainRectToRect(expandedRect, [[[self window] screen] frame]);
         [[self window]setFrame:expandedRect display:YES animate:YES];
     }
     [super expandWindow:sender];
