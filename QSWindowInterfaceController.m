@@ -1,8 +1,5 @@
 #import "QSWindowInterfaceController.h"
 #import <Carbon/Carbon.h>
-#import <QSFoundation/NSGeometry_BLTRExtensions.h>
-#import <QSEffects/QSWindow.h>
-#import <QSInterface/QSSearchObjectView.h>
 
 #import <IOKit/IOCFBundle.h>
 #import <ApplicationServices/ApplicationServices.h>
@@ -10,7 +7,6 @@
 
 #define EXPAND_HEIGHT 28
 
-//NSRect alignRectInRect(NSRect innerRect,NSRect outerRect,int quadrant);
 
 @implementation QSWindowInterfaceController
 
