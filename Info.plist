@@ -41,5 +41,10 @@
 			<string>QSWindowInterfaceController</string>
 		</dict>
 	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>version</key>
+		<string>4001</string>
+	</dict>
 </dict>
 </plist>
