@@ -1,5 +1,4 @@
 #import "QSWindowInterfaceController.h"
-#import <Carbon/Carbon.h>
 
 #import <IOKit/IOCFBundle.h>
 #import <ApplicationServices/ApplicationServices.h>

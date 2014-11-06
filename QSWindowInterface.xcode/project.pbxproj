@@ -22,8 +22,6 @@
 		14D9D1CB10D0FFEB00BEABA0 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		14D9D1CC10D0FFEB00BEABA0 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		14D9D1CD10D0FFEB00BEABA0 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
-		14D9D1CE10D0FFEB00BEABA0 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
-		14D9D1D010D0FFEB00BEABA0 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
 		14D9D1D110D0FFEB00BEABA0 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
 		14D9D1D210D0FFEB00BEABA0 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		14D9D25210D1010800BEABA0 /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +58,6 @@
 			children = (
 				14D9D1C610D0FFD400BEABA0 /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
-				32DBCF9F0370C38200C91783 /* Other Sources */,
 				0259C582FE90428111CA0C5A /* Resources */,
 				1ED78706FE9D4A0611CA0C5A /* Products */,
 				2E58F364FFB232C311CA0CBA /* Frameworks */,
@@ -84,8 +81,6 @@
 				14D9D1CB10D0FFEB00BEABA0 /* Common.xcconfig */,
 				14D9D1CC10D0FFEB00BEABA0 /* Debug.xcconfig */,
 				14D9D1CD10D0FFEB00BEABA0 /* Developer.xcconfig */,
-				14D9D1CE10D0FFEB00BEABA0 /* QSPlugIn_Debug.xcconfig */,
-				14D9D1D010D0FFEB00BEABA0 /* QSPlugIn_Release.xcconfig */,
 				14D9D1D110D0FFEB00BEABA0 /* QSPlugIn.xcconfig */,
 				14D9D1D210D0FFEB00BEABA0 /* Release.xcconfig */,
 			);
@@ -122,13 +117,6 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		32DBCF9F0370C38200C91783 /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Other Sources";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +125,9 @@
 			buildConfigurationList = 14D9D1C810D0FFD400BEABA0 /* Build configuration list for PBXNativeTarget "Window Interface" */;
 			buildPhases = (
 				8D1AC9660486D14A00FE50C9 /* Resources */,
+				E1022B2806B3475D00299BEC /* Update Version and Documentation */,
 				8D1AC96A0486D14A00FE50C9 /* Sources */,
 				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
-				E1022B2806B3475D00299BEC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -157,7 +145,7 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0610;
 			};
 			buildConfigurationList = 14D9D1C710D0FFD400BEABA0 /* Build configuration list for PBXProject "QSWindowInterface" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -193,18 +181,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		E1022B2806B3475D00299BEC /* ShellScript */ = {
+		E1022B2806B3475D00299BEC /* Update Version and Documentation */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Update Version and Documentation";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+			shellScript = "\"$QS_BUILD_ROOT/Tools/bltrversion\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -250,7 +239,6 @@
 			baseConfigurationReference = 14D9D1D110D0FFEB00BEABA0 /* QSPlugIn.xcconfig */;
 			buildSettings = {
 				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = "Window Interface";
 			};
 			name = Debug;
 		};
@@ -259,7 +247,6 @@
 			baseConfigurationReference = 14D9D1D110D0FFEB00BEABA0 /* QSPlugIn.xcconfig */;
 			buildSettings = {
 				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = "Window Interface";
 			};
 			name = Release;
 		};

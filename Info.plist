@@ -7,7 +7,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Window Interface</string>
 	<key>CFBundleExecutable</key>
-	<string>Window Interface</string>
+	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.blacktree.Quicksilver.QSWindowInterfacePlugIn</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -30,8 +30,6 @@
 		<string>Blacktree, Inc.</string>
 		<key>description</key>
 		<string>Provides a simple window interface</string>
-		<key>requiresFeature</key>
-		<string>0</string>
 		<key>webIcon</key>
 		<string></string>
 	</dict>
