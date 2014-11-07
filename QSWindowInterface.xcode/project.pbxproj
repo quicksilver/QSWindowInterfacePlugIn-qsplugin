@@ -15,7 +15,7 @@
 		E1DC06C10792EB240070FC67 /* QSWindowInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DC06BF0792EB240070FC67 /* QSWindowInterfaceController.m */; };
 		E1DC06C20792EB240070FC67 /* QSWindowInterfaceController.h in Resources */ = {isa = PBXBuildFile; fileRef = E1DC06C00792EB240070FC67 /* QSWindowInterfaceController.h */; };
 		E1DC06DB0792EBA00070FC67 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1DC06D90792EBA00070FC67 /* Localizable.strings */; };
-		E1DC06E00792EBC70070FC67 /* QSWindowInterface.nib in Resources */ = {isa = PBXBuildFile; fileRef = E1DC06DF0792EBC70070FC67 /* QSWindowInterface.nib */; };
+		E1DC06E00792EBC70070FC67 /* QSWindowInterface.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1DC06DF0792EBC70070FC67 /* QSWindowInterface.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		E1DC06BF0792EB240070FC67 /* QSWindowInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSWindowInterfaceController.m; sourceTree = "<group>"; };
 		E1DC06C00792EB240070FC67 /* QSWindowInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSWindowInterfaceController.h; sourceTree = "<group>"; };
 		E1DC06DA0792EBA00070FC67 /* en */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		E1DC06DF0792EBC70070FC67 /* QSWindowInterface.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = QSWindowInterface.nib; sourceTree = "<group>"; };
+		E1DC06DF0792EBC70070FC67 /* QSWindowInterface.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QSWindowInterface.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 		0259C582FE90428111CA0C5A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E1DC06DF0792EBC70070FC67 /* QSWindowInterface.nib */,
+				E1DC06DF0792EBC70070FC67 /* QSWindowInterface.xib */,
 				E1DC06D90792EBA00070FC67 /* Localizable.strings */,
 				8D1AC9730486D14A00FE50C9 /* Info.plist */,
 			);
@@ -174,7 +174,7 @@
 			files = (
 				E1DC06C20792EB240070FC67 /* QSWindowInterfaceController.h in Resources */,
 				E1DC06DB0792EBA00070FC67 /* Localizable.strings in Resources */,
-				E1DC06E00792EBC70070FC67 /* QSWindowInterface.nib in Resources */,
+				E1DC06E00792EBC70070FC67 /* QSWindowInterface.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
