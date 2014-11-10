@@ -1,5 +1,4 @@
 #import "QSWindowInterfaceController.h"
-#import <Carbon/Carbon.h>
 
 #import <IOKit/IOCFBundle.h>
 #import <ApplicationServices/ApplicationServices.h>
@@ -22,12 +21,8 @@
 
 - (void) windowDidLoad{
 	[super windowDidLoad];
-    [[self window] setLevel:NSModalPanelWindowLevel];
+    [[self window] setLevel:NSPopUpMenuWindowLevel];
     [[self window] setFrameAutosaveName:@"WindowInterfaceWindow"];
-    
-    // Set the window to be visible on all spaces
-    [[self window] setCollectionBehavior:NSWindowCollectionBehaviorCanJoinAllSpaces];
-
     
     [[self window]setFrame:constrainRectToRect([[self window]frame],[[[self window]screen]visibleFrame]) display:NO];
     [(QSWindow *)[self window]setHideOffset:NSMakePoint(0,-99)];
