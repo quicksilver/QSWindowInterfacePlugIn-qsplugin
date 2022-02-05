@@ -14,7 +14,6 @@
 		CDC007891593265300F91BFF /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC007881593265300F91BFF /* QSCore.framework */; };
 		E1DC06C10792EB240070FC67 /* QSWindowInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DC06BF0792EB240070FC67 /* QSWindowInterfaceController.m */; };
 		E1DC06C20792EB240070FC67 /* QSWindowInterfaceController.h in Resources */ = {isa = PBXBuildFile; fileRef = E1DC06C00792EB240070FC67 /* QSWindowInterfaceController.h */; };
-		E1DC06DB0792EBA00070FC67 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1DC06D90792EBA00070FC67 /* Localizable.strings */; };
 		E1DC06E00792EBC70070FC67 /* QSWindowInterface.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1DC06DF0792EBC70070FC67 /* QSWindowInterface.xib */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +32,6 @@
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E1DC06BF0792EB240070FC67 /* QSWindowInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSWindowInterfaceController.m; sourceTree = "<group>"; };
 		E1DC06C00792EB240070FC67 /* QSWindowInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSWindowInterfaceController.h; sourceTree = "<group>"; };
-		E1DC06DA0792EBA00070FC67 /* en */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E1DC06DF0792EBC70070FC67 /* QSWindowInterface.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QSWindowInterface.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				E1DC06DF0792EBC70070FC67 /* QSWindowInterface.xib */,
-				E1DC06D90792EBA00070FC67 /* Localizable.strings */,
 				8D1AC9730486D14A00FE50C9 /* Info.plist */,
 			);
 			name = Resources;
@@ -125,7 +122,6 @@
 			buildConfigurationList = 14D9D1C810D0FFD400BEABA0 /* Build configuration list for PBXNativeTarget "Window Interface" */;
 			buildPhases = (
 				8D1AC9660486D14A00FE50C9 /* Resources */,
-				E1022B2806B3475D00299BEC /* Update Version and Documentation */,
 				8D1AC96A0486D14A00FE50C9 /* Sources */,
 				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
 			);
@@ -146,6 +142,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					8D1AC9600486D14A00FE50C9 = {
+						ProvisioningStyle = Manual;
+					};
+				};
 			};
 			buildConfigurationList = 14D9D1C710D0FFD400BEABA0 /* Build configuration list for PBXProject "QSWindowInterface" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -173,29 +174,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1DC06C20792EB240070FC67 /* QSWindowInterfaceController.h in Resources */,
-				E1DC06DB0792EBA00070FC67 /* Localizable.strings in Resources */,
 				E1DC06E00792EBC70070FC67 /* QSWindowInterface.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E1022B2806B3475D00299BEC /* Update Version and Documentation */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Update Version and Documentation";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "\"$QS_BUILD_ROOT/Tools/bltrversion\"";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
@@ -207,17 +190,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E1DC06D90792EBA00070FC67 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E1DC06DA0792EBA00070FC67 /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		14D9D1BF10D0FFC600BEABA0 /* Debug */ = {
